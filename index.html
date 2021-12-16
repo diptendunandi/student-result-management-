@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <span class="heading">Graphic Era Result Management System</span>
+        </div>
+        <div class='filler'>
+            <p>
+                Graphic Era Deemed to be University is the culmination of the vision of its founder, Prof (Dr) Kamal Ghanshala, who had the dream to change the destiny of thousands of youth, through quality and holistic education and his vision took a concrete shape
+                in the form of Graphic Era Institute in 1996.In 2015 Graphic Era University was accredited by NAAC with grade ‘A’. University has acquired transnational dimensions through student exchange and knowledge sharing programs with many foreign
+                universities and has been acclaimed and honored at international forums for its brilliance in upholding the highest standards of education.
+            </p>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <p><a href="index.html">Home &nbsp;<img src="https://img.icons8.com/ios/30/000000/home--v2.png"/></a></p>
+                </li>
+                <li>
+                    <p><a href="login.php">Teacher &nbsp;<img src="https://img.icons8.com/ios/30/000000/admin-settings-male.png"/></a></p>
+                </li>
+                <li class="dropdown" onclick="toggleDisplay('2')">
+                    <a href="#" class="dropbtn">Student &nbsp<img src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/30/000000/external-student-health-education-inipagistudio-mixed-inipagistudio.png"/>
+                        <span class="fa fa-angle"></span>
+                    </a>
+                    <div class="dropdown-content" id="2">
+                        <a href="./loginst.php">Results</a>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sliding" style="max-width:1000px">
+            <img class="mySlides" src="images/geu1.jpg" style="width:100%">
+            <img class="mySlides" src="images/geu4.jpg" style="width:100%">
+            <img class="mySlides" src="images/geu5.jpg" style="width:100%">
+        </div>
+        <!-- <hr> -->
+        <div class="footer">
+            <div class="footer--contact">
+                <span>Contact Us</span>
+                <p>diptendunandi@gmail.com</p>
+                <p>+91-7047832826</p>
+            </div>
+            <div class="footer--info">
+                <span>Important Links</span>
+                <a href="index.html">Home</a>
+                <a href="login.php">Admin Login</a>
+                <a href="login.php">Results</a>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>
